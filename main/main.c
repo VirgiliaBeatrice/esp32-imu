@@ -140,7 +140,15 @@ void app_main()
     printf("SPI initialized.");
 
     while(1) {
-        uint32_t* recv = imu_read(spi, 21);
-        printf("Recv: %d", recv[0]);
+        uint32_t* recv;
+        // memset(recv, 0, 21);
+
+        recv = imu_read(spi, 21);
+        printf("Recv0: %d", recv[0]);
+        printf("Recv1: %d", recv[1]);
+        printf("Recv2: %d", recv[2]);
+        printf("Recv3: %d", recv[3]);
+        printf("Recv4: %d", recv[4]);
+        printf("Recv5: %d", recv[5]);
     }
 }
